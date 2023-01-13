@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core.views import home, perfil, autenticar, desconectar
+from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home, name='home'),
+    path('perfi', perfil, name='perfil'),
+    path('login/', autenticar, name='login'),
+    path("logout/", desconectar, name="logout"),
 ]
