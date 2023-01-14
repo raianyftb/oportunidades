@@ -7,18 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Página de Login</h2>
-
-    <form method="post">
-    {% csrf_token %}
-    <p>{{ form.username.label_tag }} {{ form.username }}</p>
-    <p>{{ form.password.label_tag }} {{ form.password }}</p>
+    <h2>Página Inicial</h2>
    
-    <p><input type="submit" value="Autenticar" /></p>
-    </form>
-    
-
-<p><a href="{% url 'login' %}">Login</a></p>
+    <p><a href="{% url 'login' %}">Login</a></p>
 
 </body>
 </html>
